@@ -16,9 +16,13 @@ The project was built as part of a hands-on portfolio to demonstrate applied ML/
 💬 Real-Time Streaming Responses — Assistant replies are streamed token-by-token using Python generators and st.write_stream() for a natural, ChatGPT-like typing experience.
 
 🔀 Multi-Model Selection — Users can switch between multiple LLMs at runtime via a sidebar dropdown:
-Cohere (north-mini-code)
+
+  Cohere (north-mini-code)
+
   NVIDIA (nemotron-3-ultra)
+  
   Poolside (laguna-xs-2.1)
+  
   Offline "Echo Bot" fallback (no API key required)
 
 🌡️ Adjustable Temperature Control — Sidebar slider to configure response randomness/creativity.
@@ -40,9 +44,13 @@ Category:	Technology
 Frontend / UI:	Streamlit
 
 Language:	Python 3.10+
+
 LLM Access:	OpenAI SDK routed through OpenRouter API
+
 Models:	Cohere, NVIDIA Nemotron, Poolside
+
 State Management:	Streamlit session_state
+
 Environment Config:	python-dotenv
 
 🏗️ How It Works
@@ -60,18 +68,25 @@ Analytics Panel recalculates message counts live from session state on every rer
 🚀 Getting Started
 
 Prerequisites
+
   Python 3.10+
+  
   An OpenRouter API key (free tier supports the models used here)
 
 Installation
+
 # Clone the repository
+
 git clone https://github.com/<your-username>/<repo-name>.git
+
 cd <repo-name>
 
 # Install dependencies
+
 pip install streamlit openai python-dotenv
 
 # Run the app
+
 streamlit run chatbotcreation.py
 
 The app will open automatically at http://localhost:8501.
@@ -81,6 +96,18 @@ The app will open automatically at http://localhost:8501.
 ├── chatbotcreation.py     # Main Streamlit application
 ├── requirements.txt       # Project dependencies
 └── README.md              # Project documentation
+
+🔮 Future Improvements
+
+ Add persistent chat history storage (e.g., SQLite or Firestore) beyond a single session
+ 
+ Add proper error handling for API rate limits and network failures
+ 
+ Support multi-turn context (currently each request only sends the latest message, not the full conversation history)
+ 
+ Add unit tests for the response generator and session state logic
+ 
+ Deploy to Streamlit Community Cloud with a live demo link
 
 🎯 What I Learned
 
@@ -97,3 +124,5 @@ Secure API key handling using environment variables
 📄 License
 
 This project is open source and available under the MIT License.
+
+
