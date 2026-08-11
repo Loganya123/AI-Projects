@@ -8,6 +8,7 @@ A conversational AI web application built with Streamlit that lets users chat wi
 📌 Overview
 
 This project is an end-to-end AI chatbot interface that demonstrates practical skills in LLM API integration, real-time streaming UX, and stateful web app design. Users can select from multiple language model providers via OpenRouter, watch responses stream token-by-token, and track conversation stats — all without writing a single line of frontend JavaScript, thanks to Streamlit.
+
 The project was built as part of a hands-on portfolio to demonstrate applied ML/AI engineering skills for real-world chat-based applications.
 
 ✨ Features
@@ -34,27 +35,33 @@ Cohere (north-mini-code)
 
 🛠️ Tech Stack
 
-Category	Technology
-Frontend / UI	Streamlit
-Language	Python 3.10+
-LLM Access	OpenAI SDK routed through OpenRouter API
-Models	Cohere, NVIDIA Nemotron, Poolside
-State Management	Streamlit session_state
-Environment Config	python-dotenv
+Category:	Technology
+
+Frontend / UI:	Streamlit
+
+Language:	Python 3.10+
+LLM Access:	OpenAI SDK routed through OpenRouter API
+Models:	Cohere, NVIDIA Nemotron, Poolside
+State Management:	Streamlit session_state
+Environment Config:	python-dotenv
 
 🏗️ How It Works
 
 Session State persists the full chat history, so the conversation survives every Streamlit rerun (Streamlit re-executes the whole script on each user interaction).
+
 Model Router (generate_response()) is a Python generator function that dynamically calls the selected LLM's streaming endpoint via the OpenAI-compatible OpenRouter client, or falls back to a local echo response.
+
 Streaming UI uses st.write_stream() to render each token as it arrives, then persists the completed message back into session state.
+
 Sidebar Controls let the user configure the model and temperature without reloading the page.
+
 Analytics Panel recalculates message counts live from session state on every rerun.
 
 🚀 Getting Started
 
 Prerequisites
-Python 3.10+
-An OpenRouter API key (free tier supports the models used here)
+  Python 3.10+
+  An OpenRouter API key (free tier supports the models used here)
 
 Installation
 # Clone the repository
@@ -78,9 +85,13 @@ The app will open automatically at http://localhost:8501.
 🎯 What I Learned
 
 Building interactive, stateful web apps with Streamlit's rerun-based execution model
+
 Integrating and abstracting multiple LLM providers behind a single unified interface using OpenRouter
+
 Implementing real-time token streaming using Python generators
+
 Managing application state safely across UI reruns with st.session_state
+
 Secure API key handling using environment variables
 
 📄 License
