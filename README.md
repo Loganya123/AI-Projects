@@ -13,16 +13,23 @@ The project was built as part of a hands-on portfolio to demonstrate applied ML/
 ✨ Features
 
 💬 Real-Time Streaming Responses — Assistant replies are streamed token-by-token using Python generators and st.write_stream() for a natural, ChatGPT-like typing experience.
+
 🔀 Multi-Model Selection — Users can switch between multiple LLMs at runtime via a sidebar dropdown:
 Cohere (north-mini-code)
-NVIDIA (nemotron-3-ultra)
-Poolside (laguna-xs-2.1)
-Offline "Echo Bot" fallback (no API key required)
+  NVIDIA (nemotron-3-ultra)
+  Poolside (laguna-xs-2.1)
+  Offline "Echo Bot" fallback (no API key required)
+
 🌡️ Adjustable Temperature Control — Sidebar slider to configure response randomness/creativity.
+
 🕒 Message Timestamps — Every message (user and assistant) is timestamped in 12-hour format.
+
 📊 Live Chat Analytics — Real-time metrics for user messages, assistant messages, and total conversation length.
+
 📥 Exportable Chat History — One-click download of the full conversation as a .txt transcript.
+
 🧹 Clear Chat / Session Reset — Instantly reset the conversation back to a fresh state.
+
 🔐 Secure API Key Management — API credentials loaded via environment variables (python-dotenv), never hardcoded.
 
 🛠️ Tech Stack
